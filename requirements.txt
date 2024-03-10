@@ -4,19 +4,40 @@ annotated-types==0.6.0
     # via pydantic
 anyio==4.3.0
     # via starlette
+beanie==1.25.0
+click==8.1.7
+    # via
+    #   beanie
+    #   uvicorn
+dnspython==2.6.1
+    # via pymongo
 fastapi==0.110.0
+h11==0.14.0
+    # via uvicorn
 idna==3.6
     # via anyio
+lazy-model==0.2.0
+    # via beanie
+motor==3.3.2
+    # via beanie
 pydantic==2.6.3
-    # via fastapi
+    # via
+    #   beanie
+    #   fastapi
+    #   lazy-model
 pydantic-core==2.16.3
     # via pydantic
+pymongo==4.6.2
+    # via motor
 sniffio==1.3.1
     # via anyio
 starlette==0.36.3
     # via fastapi
+toml==0.10.2
+    # via beanie
 typing-extensions==4.10.0
     # via
     #   fastapi
     #   pydantic
     #   pydantic-core
+uvicorn==0.28.0

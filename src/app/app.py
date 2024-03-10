@@ -16,7 +16,7 @@ async def configure_routing(app: FastAPI):
 async def configure_mongo():
     """Configure MongoDB connection."""
 
-    database = os.getenv("MONGO_DATABASE")
+    database = os.getenv("MONGO_DB")
 
     client = motor.motor_asyncio.AsyncIOMotorClient(
         f"mongodb://mongodb:27017/{database}"

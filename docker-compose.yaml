@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+
+  app:
+    build: .
+    environment:
+      - MONGO_DB=start-hack
+    ports: 
+      - "8000:8000"
+    working_dir: /src
+    volumes:
+      - .:/src
+    links:
+      - "mongodb:mongodb"
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=start-hack
+    command: mongod --quiet --logpath /dev/null
+
+volumes:
+  mongodb_data:
+    driver: local

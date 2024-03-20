@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+      --doc-height: 100%;
+    }
+  
+    html,
+    body {
+      height: 100vh;
+      height: var(--doc-height);
+    }
+  }

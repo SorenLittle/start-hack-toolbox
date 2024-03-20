@@ -706,8 +706,14 @@ select {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.static {
+  position: static;
+}
 .block {
   display: block;
+}
+.h-screen {
+  height: 100vh;
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -724,4 +730,8 @@ select {
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+.text-stone-600 {
+  --tw-text-opacity: 1;
+  color: rgb(87 83 78 / var(--tw-text-opacity));
 }

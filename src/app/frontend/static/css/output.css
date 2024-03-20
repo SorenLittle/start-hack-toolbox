@@ -706,14 +706,44 @@ select {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+.row-span-1 {
+  grid-row: span 1 / span 1;
+}
 .block {
   display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
 }
 .h-screen {
   height: 100vh;
 }
 .snap-center {
   scroll-snap-align: center;
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -731,9 +761,20 @@ select {
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
+.text-center {
+  text-align: center;
+}
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
 }
 .font-bold {
   font-weight: 700;
@@ -741,4 +782,17 @@ select {
 .text-stone-600 {
   --tw-text-opacity: 1;
   color: rgb(87 83 78 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-opacity-50 {
+  --tw-text-opacity: 0.5;
+}
+.text-opacity-20 {
+  --tw-text-opacity: 0.2;
+}
+.text-opacity-80 {
+  --tw-text-opacity: 0.8;
 }

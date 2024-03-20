@@ -1,16 +1,26 @@
 from contextlib import asynccontextmanager
 import os
+from pathlib import Path
 
 from beanie import init_beanie
+from fastapi.staticfiles import StaticFiles
 import motor
 from fastapi import FastAPI
+
+from .frontend.routes.home import router as home_router
 
 
 async def configure_routing(app: FastAPI):
     """Configure routing for the application."""
 
-    # app.include_router(your_router)  # 🚨 ADD YOUR ROUTERS HERE
-    ...
+    app.include_router(home_router)
+
+
+async def configure_static(app: FastAPI):
+    """Configure static files for the application."""
+
+    static_directory = Path(__file__).parent / "frontend" / "static"
+    app.mount("/static", StaticFiles(directory=static_directory), name="static")
 
 
 async def configure_mongo():
@@ -34,6 +44,7 @@ async def lifespan(app: FastAPI):
 
     # This is everything that happens when the application starts
     await configure_mongo()
+    await configure_static(app=app)
     await configure_routing(app=app)
 
     yield  # This is where the application runs

@@ -590,14 +590,21 @@ select {
   outline: 1px solid ButtonText;
   outline: 1px auto -webkit-focus-ring-color;
 }
-    :root {
-      --doc-height: 100%;
-    }
-  
-    html,
-    body {
-      height: 100vh;
-      height: var(--doc-height);
+    * {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #fbcfe8;
+}
+
+    /* Material Icons font styles */
+
+    @font-face {
+        font-family: "Material Icons";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Material Icons"), local("MaterialIcons-Regular"),
+            url(../fonts/MaterialIcons-Regular.woff2) format("woff2"),
+            url(../fonts/MaterialIcons-Regular.ttf) format("truetype");
     }
 
 *, ::before, ::after {
@@ -698,4 +705,23 @@ select {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+.block {
+  display: block;
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-cover {
+  background-size: cover;
+}
+.bg-fixed {
+  background-attachment: fixed;
+}
+.bg-center {
+  background-position: center;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }

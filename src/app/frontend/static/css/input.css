@@ -3,13 +3,62 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-      --doc-height: 100%;
+    * {
+        @apply outline outline-1 outline-pink-200 
     }
-  
-    html,
-    body {
-      height: 100vh;
-      height: var(--doc-height);
+
+    /* Material Icons font styles */
+
+    @font-face {
+        font-family: "Material Icons";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Material Icons"), local("MaterialIcons-Regular"),
+            url(../fonts/MaterialIcons-Regular.woff2) format("woff2"),
+            url(../fonts/MaterialIcons-Regular.ttf) format("truetype");
     }
-  }
+
+    .material-icons {
+        font-family: "Material Icons";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        /* preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .material-icons.icon-sm,
+    .line-icons.icon-sm {
+        font-size: 18px;
+    }
+
+    .material-icons.icon-base,
+    .line-icons.icon-base {
+        font-size: 24px;
+    }
+
+    .material-icons.icon-lg,
+    .line-icons.icon-lg {
+        font-size: 36px;
+    }
+
+    .material-icons.icon-xl,
+    .line-icons.icon-xl {
+        font-size: 48px;
+    }
+}

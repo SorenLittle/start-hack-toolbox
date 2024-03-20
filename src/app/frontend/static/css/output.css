@@ -715,6 +715,9 @@ select {
 .h-screen {
   height: 100vh;
 }
+.snap-center {
+  scroll-snap-align: center;
+}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -730,6 +733,10 @@ select {
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 .text-stone-600 {
   --tw-text-opacity: 1;

@@ -21,14 +21,16 @@ class Crop(BaseModel):
     nutrient_impact: int
 
 
-class Window(BaseModel):
+class Farm(BaseModel):
     """The plating "window" for crops. Its dimensions are n time units by m fields."""
-    timeframe: tuple[int, int]
-    fields: tuple[int, int]
+    timeframe: int
+    fields: int
 
 
 class Allocation(BaseModel):
     """A planted state. Represents a mapping of a crop to each time, field pair."""
     start_date: datetime = datetime.now()
+    crops: list[Crop]
+    farm: Farm
     mapping: list[list[Crop]]
 

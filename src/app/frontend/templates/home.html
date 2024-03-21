@@ -3,30 +3,154 @@
 {% extends "base.html" %}
 
 {% block content %}
+<script defer>
+    // JavaScript to handle the increment
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let counter = 10; // Start counter at 0
+
+        const button = document.getElementById('incrementButton');
+
+        // Increment counter when button is clicked
+        button.addEventListener('click', () => {
+            counter++;
+        });
+
+    });
+</script>
 
 <div>
+
     <!-- Background image -->
-    <div class="bg-cover bg-fixed bg-center bg-no-repeat h-screen" style="background-image: url('../static/img/background-placeholder.jpg');">
+    <div id="full-background" class="bg-cover bg-fixed bg-center bg-no-repeat"
+        style="background-image: url('../static/img/syngenta/Cropwise_Planting_Image_Asset_2023\ 16.jpg');">
 
-    
-    <!-- "Landing" section -->
-    <div class="h-">
-        <div class="grid grid-cols-3 grid-rows-3 h-screen justify-center">
-            <div class="col-span-3 row-span-1"></div>
-            <div class="row-span-1"></div>
-            <div class="row-span-1 flex justify-center items-center">
-                <h1 class="text-white text-opacity-80 snap-center text-9xl ">PLACEHOLDER</h1>
+
+        <!-- "Landing" section -->
+        <div class="h-screen">
+            <div class="grid grid-cols-3 grid-rows-3 h-screen justify-center">
+                <div class="col-span-3 row-span-1"></div>
+                <div class="row-span-1"></div>
+                <div class="row-span-1 flex justify-center items-center">
+                    <h1 class="text-white text-opacity-80 snap-center text-9xl ">PLACEHOLDER</h1>
+                </div>
+                <div class="row-span-1"></div>
+                <div class="col-span-3 row-span-1"></div>
             </div>
-            <div class="row-span-1"></div>
-            <div class="col-span-3 row-span-1"></div>
-        </div>   
-    </div>
+        </div>
 
-    <!-- Scrolling section -->
-    <div class="bg-white h-screen">
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ea ratione, laborum dolor at voluptates cupiditate earum, in laboriosam iure molestias consequuntur aspernatur possimus alias repellendus voluptatem ipsa voluptatibus sequi?</div>
-    </div>
+        <!-- Scrolling section -->
+        <div class="">
+            <div class="bg-gradient-to-b from-transparent to-white h-48"></div>
 
+            <div class="flex flex-col h-screen bg-white px-32">
+
+                <!-- Inputs -->
+                <div class="bg-green-900 m-12">
+                    Placeholder
+                </div>
+
+                <div class="bg-slate-50 shadow-inner p-8 rounded-lg">
+                    <!-- Display -->
+                    <div class="flex justify-center items-center">
+                        <div
+                            class="grid grid-cols-{{ allocation.farm.timeframe }} grid-rows-{{ allocation.farm.fields +1 }} gap-4">
+
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Summer
+                                </div>
+                            </div>
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Winter
+                                </div>
+                            </div>
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Summer
+                                </div>
+                            </div>
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Winter
+                                </div>
+                            </div>
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Summer
+                                </div>
+                            </div>
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Winter
+                                </div>
+                            </div>
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Summer
+                                </div>
+                            </div>
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Winter
+                                </div>
+                            </div>
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Summer
+                                </div>
+                            </div>
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-end w-full h-full">
+                                    Winter
+                                </div>
+                            </div>
+
+
+                            {% for timeframe in allocation.mapping %}
+                            {% for crop in timeframe %}
+                            <div class="w-28 h-20">
+                                <div class="flex justify-center items-center w-full h-full">
+                                    <div class="">{{ crop.name.value }}</div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center ml-8">
+                            <button type="button" id="add-field-btn"
+                                class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                                </svg>
+                            </button>
+                            <div class="font-bold my-4">
+                                Season
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add field btn -->
+                    <div class="flex justify-center items-center mt-8">
+                        <button type="button" id="add-field-btn"
+                            class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                            </svg>
+                        </button>
+                        <div class="font-bold mx-4">
+                            Field
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
 </div>
 
 {% endblock %}

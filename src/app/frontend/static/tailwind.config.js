@@ -8,7 +8,11 @@ module.exports = {
     debugScreens: {
       position: ['bottom', 'right'],
     },
-    extend: {},
+    extend: {
+        fontFamily: {
+            'sans': ['Helvetica Neue']
+        }
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

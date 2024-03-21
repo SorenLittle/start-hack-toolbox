@@ -7,17 +7,29 @@ anyio==4.3.0
     #   starlette
     #   watchfiles
 beanie==1.25.0
+beautifulsoup4==4.12.3
+    # via yahoofinance
+certifi==2024.2.2
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via
     #   beanie
     #   uvicorn
+cplex==22.1.1.0
 dnspython==2.6.1
     # via pymongo
+docplex==2.25.236
+exceptiongroup==1.2.0
+    # via anyio
 fastapi==0.110.0
 h11==0.14.0
     # via uvicorn
 idna==3.6
-    # via anyio
+    # via
+    #   anyio
+    #   requests
 jinja2==3.1.3
 lazy-model==0.2.0
     # via beanie
@@ -25,6 +37,10 @@ markupsafe==2.1.5
     # via jinja2
 motor==3.3.2
     # via beanie
+numpy==1.26.4
+    # via pandas
+pandas==2.2.1
+    # via yahoofinance
 pydantic==2.6.3
     # via
     #   beanie
@@ -34,16 +50,36 @@ pydantic-core==2.16.3
     # via pydantic
 pymongo==4.6.2
     # via motor
+python-dateutil==2.9.0.post0
+    # via pandas
+pytz==2024.1
+    # via pandas
+requests==2.31.0
+    # via yahoofinance
+six==1.16.0
+    # via
+    #   docplex
+    #   python-dateutil
 sniffio==1.3.1
     # via anyio
+soupsieve==2.5
+    # via beautifulsoup4
 starlette==0.36.3
     # via fastapi
 toml==0.10.2
     # via beanie
 typing-extensions==4.10.0
     # via
+    #   anyio
+    #   beanie
     #   fastapi
     #   pydantic
     #   pydantic-core
+    #   uvicorn
+tzdata==2024.1
+    # via pandas
+urllib3==2.2.1
+    # via requests
 uvicorn==0.28.0
 watchfiles==0.21.0
+yahoofinance==0.0.2

@@ -3,3 +3,4 @@ fastapi
 uvicorn
 Jinja2
 watchfiles
+docplex

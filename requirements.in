@@ -3,4 +3,7 @@ fastapi
 uvicorn
 Jinja2
 watchfiles
+yahoofinance
+pydantic
 docplex
+cplex

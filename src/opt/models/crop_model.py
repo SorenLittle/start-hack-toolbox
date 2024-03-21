@@ -14,11 +14,12 @@ class CropName(str, Enum):
     COVERCROP ="COVERCROP"
 
 
+
 class Crop(BaseModel):
     name: CropName
     crop_yield: float
-    duration: Optional(int)
-    price: Optional(float)
+    duration: Optional[int] = None
+    price: Optional[float] = None
     nutrient_impact: int
 
 
@@ -35,3 +36,16 @@ class Allocation(BaseModel):
     farm: Farm
     mapping: list[list[Crop]]
 
+
+
+class CropYieldNutrient(BaseModel):
+    crop: CropName
+    yield_value: float
+    nutrient_level: float
+    field: int
+    season: int
+
+
+
+class AgricultureData(BaseModel):
+    data: list[CropYieldNutrient]

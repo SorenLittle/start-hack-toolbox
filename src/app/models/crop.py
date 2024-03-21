@@ -17,8 +17,8 @@ class CropName(str, Enum):
 class Crop(BaseModel):
     name: CropName
     crop_yield: float
-    duration: Optional(int)
-    price: Optional(float)
+    duration: Optional[int]
+    price: Optional[float]
     nutrient_impact: int
 
 

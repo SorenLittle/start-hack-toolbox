@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-    * {
+    /* * {
         @apply outline outline-1 outline-pink-200 
-    }
+    } */
 
     /* Material Icons font styles */
 

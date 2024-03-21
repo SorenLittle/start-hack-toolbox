@@ -905,6 +905,9 @@ select {
   padding-left: 8rem;
   padding-right: 8rem;
 }
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 .text-9xl {
   font-size: 8rem;
   line-height: 1;

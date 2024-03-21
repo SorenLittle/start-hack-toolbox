@@ -6,6 +6,47 @@
 <script defer>
     // JavaScript to handle the increment
     document.addEventListener('DOMContentLoaded', (event) => {
+        const textElement = document.getElementById('animated-text');
+    const word = 'croptimized';
+    let letterIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 200;
+
+    function typeEffect() {
+        const current = word.substring(0, letterIndex);
+        // This time, the cursor is included at the start of the text.
+        if (!isDeleting) {
+            textElement.innerHTML = `<span class="animated-cursor font-mono"></span><span class="text-white">${current}</span>`;
+        } else {
+            textElement.innerHTML = `<span class="animated-cursor font-mono"></span><span class="text-white">${current.slice(0, -1)}</span>`;
+        }
+
+        // Adjust how the cursor moves with the text
+        const cursorElement = textElement.querySelector('.animated-cursor');
+        if (!isDeleting && letterIndex === word.length) {
+            // Pause at the end with the cursor blinking after the text
+            setTimeout(() => { isDeleting = true; }, 1000);
+            cursorElement.style.borderRight = '2px solid white'; // Ensure cursor is visible at the end
+        } else if (isDeleting && letterIndex === 0) {
+            isDeleting = false;
+            letterIndex = 0; // Reset index to start typing again
+            setTimeout(typeEffect, 200); // Slight pause before restarting
+            return; // Exit function to avoid immediate loop
+        }
+
+        if (isDeleting) {
+            // Move the cursor to the left by removing text
+            textElement.insertBefore(cursorElement, textElement.firstChild);
+        } else {
+            // Append the cursor at the end as the text types out
+            textElement.appendChild(cursorElement);
+        }
+
+        letterIndex += isDeleting ? -1 : 1;
+        setTimeout(typeEffect, typingSpeed);
+    }
+
+    typeEffect(); // Start the typing effect
         let counter = 10; // Start counter at 0
 
         const button = document.getElementById('incrementButton');
@@ -16,6 +57,9 @@
         });
 
     });
+
+
+    
 </script>
 
 <div>
@@ -31,12 +75,13 @@
                 <div class="col-span-3 row-span-1"></div>
                 <div class="row-span-1"></div>
                 <div class="row-span-1 flex justify-center items-center">
-                    <h1 class="text-white text-opacity-90 snap-center text-9xl font-bold tracking-widest">croptimized</h1>
+                    <h1 id="animated-text" class="text-white text-opacity-90 snap-center text-9xl font-bold tracking-widest"></h1>
                 </div>
                 <div class="row-span-1"></div>
                 <div class="col-span-3 row-span-1"></div>
             </div>
         </div>
+        
 
         <!-- Scrolling section -->
         <div class="">

@@ -61,4 +61,22 @@
     .line-icons.icon-xl {
         font-size: 48px;
     }
+
+    @keyframes blink {
+        from, to { border-color: transparent }
+        50% { border-color: black; }
+      }
+      
+      .text-white {
+        color: white;
+      }
+      
+      .animated-cursor {
+        display: inline-block;
+        border-right: 2px solid white; /* Adjust color as needed */
+        padding-right: 5px; /* Ensures spacing does not jump */
+        animation: blink 0.75s step-end infinite;
+      }
+      
 }
+

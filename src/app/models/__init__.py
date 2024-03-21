@@ -1,1 +1,1 @@
-from crop import Crop, CropName, Farm, Allocation
+from .crop import Crop, CropName, Farm, Allocation

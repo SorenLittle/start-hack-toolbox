@@ -1,4 +1,4 @@
-from models import *
+from .models import *
 
 corn = Crop(
     name=CropName.CORN, crop_yield=2.5, duration=3, price=3.5, nutrient_impact=2

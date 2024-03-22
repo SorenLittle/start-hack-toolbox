@@ -7,6 +7,11 @@ from src.app.example_data import allocation
 from src.opt.models import AgricultureData
 from src.opt.models import Crop
 from src.opt import croptimization
+
+# from src.app.example_data import allocation
+from src.opt.crop_optimization import allocation
+
+
 router = fastapi.APIRouter()
 templates = Jinja2Templates(directory="src/app/frontend/templates")
 

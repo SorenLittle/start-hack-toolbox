@@ -1,0 +1,354 @@
+{
+    "data": [
+        {
+            "crop": "CORN",
+            "yield_value": 7.0,
+            "nutrient_level": 6.0,
+            "field": 1,
+            "season": 1
+        },
+        {
+            "crop": "CORN",
+            "yield_value": 14.0,
+            "nutrient_level": 2.0,
+            "field": 1,
+            "season": 2
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 14.0,
+            "nutrient_level": 3.0,
+            "field": 1,
+            "season": 3
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 17.0,
+            "nutrient_level": 2.0,
+            "field": 1,
+            "season": 4
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 17.0,
+            "nutrient_level": 3.0,
+            "field": 1,
+            "season": 5
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 20.0,
+            "nutrient_level": 2.0,
+            "field": 1,
+            "season": 6
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 20.0,
+            "nutrient_level": 3.0,
+            "field": 1,
+            "season": 7
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 23.0,
+            "nutrient_level": 2.0,
+            "field": 1,
+            "season": 8
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 23.0,
+            "nutrient_level": 3.0,
+            "field": 1,
+            "season": 9
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 26.0,
+            "nutrient_level": 2.0,
+            "field": 1,
+            "season": 10
+        },
+        {
+            "crop": "CORN",
+            "yield_value": 7.0,
+            "nutrient_level": 6.0,
+            "field": 2,
+            "season": 1
+        },
+        {
+            "crop": "CORN",
+            "yield_value": 14.0,
+            "nutrient_level": 2.0,
+            "field": 2,
+            "season": 2
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 14.0,
+            "nutrient_level": 3.0,
+            "field": 2,
+            "season": 3
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 17.0,
+            "nutrient_level": 2.0,
+            "field": 2,
+            "season": 4
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 17.0,
+            "nutrient_level": 3.0,
+            "field": 2,
+            "season": 5
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 20.0,
+            "nutrient_level": 2.0,
+            "field": 2,
+            "season": 6
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 20.0,
+            "nutrient_level": 3.0,
+            "field": 2,
+            "season": 7
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 23.0,
+            "nutrient_level": 2.0,
+            "field": 2,
+            "season": 8
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 23.0,
+            "nutrient_level": 3.0,
+            "field": 2,
+            "season": 9
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 26.0,
+            "nutrient_level": 2.0,
+            "field": 2,
+            "season": 10
+        },
+        {
+            "crop": "CORN",
+            "yield_value": 7.0,
+            "nutrient_level": 6.0,
+            "field": 3,
+            "season": 1
+        },
+        {
+            "crop": "CORN",
+            "yield_value": 14.0,
+            "nutrient_level": 2.0,
+            "field": 3,
+            "season": 2
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 14.0,
+            "nutrient_level": 3.0,
+            "field": 3,
+            "season": 3
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 17.0,
+            "nutrient_level": 2.0,
+            "field": 3,
+            "season": 4
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 17.0,
+            "nutrient_level": 3.0,
+            "field": 3,
+            "season": 5
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 20.0,
+            "nutrient_level": 2.0,
+            "field": 3,
+            "season": 6
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 20.0,
+            "nutrient_level": 3.0,
+            "field": 3,
+            "season": 7
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 23.0,
+            "nutrient_level": 2.0,
+            "field": 3,
+            "season": 8
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 23.0,
+            "nutrient_level": 3.0,
+            "field": 3,
+            "season": 9
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 26.0,
+            "nutrient_level": 2.0,
+            "field": 3,
+            "season": 10
+        },
+        {
+            "crop": "CORN",
+            "yield_value": 7.0,
+            "nutrient_level": 6.0,
+            "field": 4,
+            "season": 1
+        },
+        {
+            "crop": "CORN",
+            "yield_value": 14.0,
+            "nutrient_level": 2.0,
+            "field": 4,
+            "season": 2
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 14.0,
+            "nutrient_level": 3.0,
+            "field": 4,
+            "season": 3
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 17.0,
+            "nutrient_level": 2.0,
+            "field": 4,
+            "season": 4
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 17.0,
+            "nutrient_level": 3.0,
+            "field": 4,
+            "season": 5
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 20.0,
+            "nutrient_level": 2.0,
+            "field": 4,
+            "season": 6
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 20.0,
+            "nutrient_level": 3.0,
+            "field": 4,
+            "season": 7
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 23.0,
+            "nutrient_level": 2.0,
+            "field": 4,
+            "season": 8
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 23.0,
+            "nutrient_level": 3.0,
+            "field": 4,
+            "season": 9
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 26.0,
+            "nutrient_level": 2.0,
+            "field": 4,
+            "season": 10
+        },
+        {
+            "crop": "CORN",
+            "yield_value": 4.0,
+            "nutrient_level": 7.0,
+            "field": 5,
+            "season": 1
+        },
+        {
+            "crop": "CORN",
+            "yield_value": 8.0,
+            "nutrient_level": 4.0,
+            "field": 5,
+            "season": 2
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 11.0,
+            "nutrient_level": 2.0,
+            "field": 5,
+            "season": 3
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 11.0,
+            "nutrient_level": 3.0,
+            "field": 5,
+            "season": 4
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 11.0,
+            "nutrient_level": 4.0,
+            "field": 5,
+            "season": 5
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 14.0,
+            "nutrient_level": 2.0,
+            "field": 5,
+            "season": 6
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 14.0,
+            "nutrient_level": 3.0,
+            "field": 5,
+            "season": 7
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 14.0,
+            "nutrient_level": 4.0,
+            "field": 5,
+            "season": 8
+        },
+        {
+            "crop": "SOYBEAN",
+            "yield_value": 17.0,
+            "nutrient_level": 2.0,
+            "field": 5,
+            "season": 9
+        },
+        {
+            "crop": "COVERCROP",
+            "yield_value": 17.0,
+            "nutrient_level": 3.0,
+            "field": 5,
+            "season": 10
+        }
+    ]
+}

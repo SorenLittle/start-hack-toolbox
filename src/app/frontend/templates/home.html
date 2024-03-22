@@ -31,46 +31,48 @@
         });
         });
         const textElement = document.getElementById('animated-text');
-        const word = 'croptimized';
-        let letterIndex = 0;
-        let isDeleting = false;
-        let typingSpeed = 200;
+const words = ['croptimized', 'optimized']; // Words to cycle through
+let wordIndex = 0; // Current word index
+let letterIndex = 0; // Current letter index within the word
+let isDeleting = false; // Flag to track if currently deleting
+let typingSpeed = 200; // Speed of typing
 
-        function typeEffect() {
-            const current = word.substring(0, letterIndex);
-            // This time, the cursor is included at the start of the text.
-            if (!isDeleting) {
-                textElement.innerHTML = `<span class="animated-cursor font-mono"></span><span class="text-white">${current}</span>`;
-            } else {
-                textElement.innerHTML = `<span class="animated-cursor font-mono"></span><span class="text-white">${current.slice(0, -1)}</span>`;
-            }
+function typeEffect() {
+    const currentWord = words[wordIndex]; // Current word based on wordIndex
+    const current = currentWord.substring(0, letterIndex); // Current portion of the word to display
 
-            // Adjust how the cursor moves with the text
-            const cursorElement = textElement.querySelector('.animated-cursor');
-            if (!isDeleting && letterIndex === word.length) {
-                // Pause at the end with the cursor blinking after the text
-                setTimeout(() => { isDeleting = true; }, 1000);
-                cursorElement.style.borderRight = '2px solid white'; // Ensure cursor is visible at the end
-            } else if (isDeleting && letterIndex === 0) {
-                isDeleting = false;
-                letterIndex = 0; // Reset index to start typing again
-                setTimeout(typeEffect, 200); // Slight pause before restarting
-                return; // Exit function to avoid immediate loop
-            }
+    // Update the displayed text
+    textElement.innerHTML = `<span class="text-white">${current}</span><span class="animated-cursor font-mono">|</span>`;
 
-            if (isDeleting) {
-                // Move the cursor to the left by removing text
-                textElement.insertBefore(cursorElement, textElement.firstChild);
-            } else {
-                // Append the cursor at the end as the text types out
-                textElement.appendChild(cursorElement);
-            }
-
-            letterIndex += isDeleting ? -1 : 1;
+    // Adjust the typing speed and the process for adding and removing letters
+    if (isDeleting) {
+        // Deleting letters
+        if (letterIndex > 0) {
+            // If there are letters left, delete one
+            letterIndex--;
+            setTimeout(typeEffect, typingSpeed / 2); // Deleting is faster
+        } else {
+            // If no letters left, move to the next word and start typing
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
             setTimeout(typeEffect, typingSpeed);
         }
+    } else {
+        // Adding letters
+        if (letterIndex < currentWord.length) {
+            // If not all letters have been added, add one
+            letterIndex++;
+            setTimeout(typeEffect, typingSpeed);
+        } else {
+            // If the entire word is displayed, pause before starting to delete
+            isDeleting = true;
+            setTimeout(typeEffect, 2000); // Longer pause at the end of typing
+        }
+    }
+}
 
-        typeEffect(); // Start the typing effect
+typeEffect(); // Start the typing effect
+
         let counter = 10; // Start counter at 0
 
         const button = document.getElementById('incrementButton');

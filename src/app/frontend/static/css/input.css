@@ -77,6 +77,13 @@
         padding-right: 5px; /* Ensures spacing does not jump */
         animation: blink 0.75s step-end infinite;
       }
+      .bg-highlight {
+        background-color: #007acc; /* Terminal-like background color for the highlighted letter */
+        color: white; /* Text color */
+    }
+
+    
+    
       
 }
 

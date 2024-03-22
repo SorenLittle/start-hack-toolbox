@@ -117,14 +117,14 @@ def croptimization(number_of_fields: int, number_of_seasons: int, crops: list[Cr
 
 
 # Example usage
-number_of_fields = 5
-number_of_seasons = 10
-crops = [Crop(name=CropName.CORN,crop_yield=4, nutrient_impact=-3), Crop(name=CropName.SOYBEAN,crop_yield=3, nutrient_impact=-2),Crop(name=CropName.WHEAT,crop_yield=2, nutrient_impact=-1),Crop(name=CropName.MAIZE,crop_yield=6, nutrient_impact=-4)]
+#number_of_fields = 5
+#number_of_seasons = 10
+#crops = [Crop(name=CropName.CORN,crop_yield=4, nutrient_impact=-3), Crop(name=CropName.SOYBEAN,crop_yield=3, nutrient_impact=-2),Crop(name=CropName.WHEAT,crop_yield=2, nutrient_impact=-1),Crop(name=CropName.MAIZE,crop_yield=6, nutrient_impact=-4)]
 
-agriculture_data = croptimization(number_of_fields, number_of_seasons, crops)
+#agriculture_data = croptimization(number_of_fields, number_of_seasons, crops)
 
-json_str = agriculture_data.json()
+#json_str = agriculture_data.json()
 
 # Save the JSON string to a file
-with open("agriculture_data.json", "w") as file:
-    file.write(json_str)
+#with open("agriculture_data.json", "w") as file:
+#    file.write(json_str)

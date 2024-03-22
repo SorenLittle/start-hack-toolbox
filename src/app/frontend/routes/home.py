@@ -7,9 +7,9 @@ from src.app.example_data import allocation
 from src.opt.models import AgricultureData
 from src.opt.models import Crop
 from src.opt import croptimization
+from src.opt.models import CropName 
 
 # from src.app.example_data import allocation
-from src.opt.crop_optimization import allocation
 
 
 router = fastapi.APIRouter()
@@ -34,7 +34,9 @@ async def opt(opt_request: OptRequestModel):  # Using Request for template rende
     return agriculture_data
 @router.get("/", response_class=HTMLResponse)
 async def home(request: fastapi.Request) -> fastapi.Response:
+    crops = [Crop(name=CropName.CORN,crop_yield=4, nutrient_impact=-3), Crop(name=CropName.SOYBEAN,crop_yield=3, nutrient_impact=-2),Crop(name=CropName.WHEAT,crop_yield=2, nutrient_impact=-1),Crop(name=CropName.MAIZE,crop_yield=6, nutrient_impact=-4)]
 
-    context = {"request": request, "allocation": allocation}
+    agriculture_data = croptimization(5, 10, crops, 8, 3, 20)
+    context = {"request": request, "allocation": agriculture_data}
 
     return templates.TemplateResponse("home.html", context)

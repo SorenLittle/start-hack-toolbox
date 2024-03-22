@@ -54,3 +54,6 @@ To run the FastAPI instance locally with Docker, ensuring your project's root di
 ```bash
 sudo docker-compose up --build
 ```
+
+-----
+Created by Soren Little, Jakob Mayer @StartHACK

@@ -36,7 +36,8 @@ module.exports = {
     },
     extend: {
         fontFamily: {
-            'sans': ['Helvetica Neue']
+            'sans': ['Helvetica Neue'],
+            'mono': ['American Typewriter']
         }
     },
   },

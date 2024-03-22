@@ -12,6 +12,7 @@ class CropName(str, Enum):
     BARLEY = "BARLEY"
     SUNFLOWER = "SUNFLOWER"
     COVERCROP ="COVERCROP"
+    UNKNOWN = "UNKNOWN"
 
 
 

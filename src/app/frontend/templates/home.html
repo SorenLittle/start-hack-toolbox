@@ -6,30 +6,6 @@
 <script defer>
     // JavaScript to handle the increment
     document.addEventListener('DOMContentLoaded', (event) => {
-    function clearSoilTypeSelections() {
-        document.querySelectorAll('#yearButton, #monthButton, #dayButton').forEach(button => {
-            button.classList.remove('bg-gray-300', 'text-white');
-            button.classList.add('bg-white', 'text-gray-900');
-        });
-    }
-
-    // Add event listeners to soil type buttons for single selection
-    document.querySelectorAll('#yearButton, #monthButton, #dayButton').forEach(button => {
-        button.addEventListener('click', function() {
-            clearSoilTypeSelections(); // Clear previous selections
-            this.classList.add('bg-gray-300', 'text-white'); // Add selected state styles
-            this.classList.remove('bg-white', 'text-gray-900');
-        });
-    });
-        const toggleButtons = document.querySelectorAll('.toggle-button');
-        document.querySelectorAll('.selectable-button').forEach(button => {
-        button.addEventListener('click', () => {
-            button.classList.toggle('bg-indigo-500');
-            button.classList.toggle('bg-indigo-600');
-            // Adjust the hover color for active buttons directly in the class list
-            button.classList.contains('bg-indigo-500') ? button.classList.add('hover:bg-indigo-700') : button.classList.remove('hover:bg-indigo-700');
-        });
-        });
         const textElement = document.getElementById('animated-text');
         const word = 'croptimized';
         let letterIndex = 0;
@@ -71,14 +47,6 @@
         }
 
         typeEffect(); // Start the typing effect
-        let counter = 10; // Start counter at 0
-
-        const button = document.getElementById('incrementButton');
-
-        // Increment counter when button is clicked
-        button.addEventListener('click', () => {
-            counter++;
-        });
 
     });
     const buttons = document.querySelectorAll('.selectable-button');
@@ -99,10 +67,6 @@
         this.classList.remove('bg-white', 'text-gray-900');
         });
     });
-
-    
-
-
 
 </script>
 
@@ -161,12 +125,12 @@
                         <div class="grid grid-cols-3 gap-4 w-full items-start ml-4">
                      
                             <!-- Generate 6 buttons -->
-                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Corn</button>
-                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Soybean</button>
-                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Maize</button>
-                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Wheat</button>
-                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Barley</button>
-                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sunflower</button>
+                            <button type="button" class="selectable-button rounded-md bg-emerald-500 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500" _="on click remove .bg-emerald-500 then add .bg-emerald-600">Corn</button>
+                            <button type="button" class="selectable-button rounded-md bg-emerald-500 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500" _="on click remove .bg-emerald-500 then add .bg-emerald-600">Soybean</button>
+                            <button type="button" class="selectable-button rounded-md bg-emerald-500 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500" _="on click remove .bg-emerald-500 then add .bg-emerald-600">Maize</button>
+                            <button type="button" class="selectable-button rounded-md bg-emerald-500 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500" _="on click remove .bg-emerald-500 then add .bg-emerald-600">Wheat</button>
+                            <button type="button" class="selectable-button rounded-md bg-emerald-500 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500" _="on click remove .bg-emerald-500 then add .bg-emerald-600">Barley</button>
+                            <button type="button" class="selectable-button rounded-md bg-emerald-500 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500" _="on click remove .bg-emerald-500 then add .bg-emerald-600">Sunflower</button>
                         </div>
                         <div class="flex-1 flex gap-4 items-start ml-4 mt-4 text-xl text-slate-500">
                             Available Soil Types
@@ -175,9 +139,9 @@
                         <!-- Dropdown Section -->
                         <div class="flex flex-col justify-center items-center gap-4 ml-4 mt-4 w-full">
                             <div class="isolate inline-flex w-full rounded-md shadow-sm">
-                              <button type="button" id="yearButton" class="selectable-button flex-1 rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">Clay</button>
-                              <button type="button" id="monthButton" class="selectable-button flex-1 bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">Loam</button>
-                              <button type="button" id="dayButton" class="selectable-button flex-1 rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">Silt</button>
+                              <button type="button" id="yearButton" class="selectable-button flex-1 rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10" _="on click remove .bg-white remove .hover:bg-gray-50 then add .bg-stone-400">Clay</button>
+                              <button type="button" id="monthButton" class="selectable-button flex-1 bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"  _="on click remove .bg-white remove .hover:bg-gray-50 then add .bg-stone-400">Loam</button>
+                              <button type="button" id="dayButton" class="selectable-button flex-1 rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"  _="on click remove .bg-white remove .hover:bg-gray-50 then add .bg-stone-400">Silt</button>
                             </div>
                           </div>
                     </div>
@@ -242,7 +206,27 @@
 
                             {% for datapoint in allocation.data %}
                             <div class="w-28 h-20">
-                                <div class="flex justify-center items-center w-full h-full">
+                                <div class="flex justify-center items-center w-full h-full {% if datapoint.nutrient_level >= 9 %}
+                                    bg-green-300
+                                {% elif datapoint.nutrient_level >= 8 %}
+                                    bg-green-400
+                                {% elif datapoint.nutrient_level >= 7 %}
+                                    bg-green-500
+                                {% elif datapoint.nutrient_level >= 6 %}
+                                    bg-lime-500
+                                {% elif datapoint.nutrient_level >= 5 %}
+                                    bg-yellow-500
+                                {% elif datapoint.nutrient_level >= 4 %}
+                                    bg-orange-500
+                                {% elif datapoint.nutrient_level >= 3 %}
+                                    bg-red-500
+                                {% elif datapoint.nutrient_level >= 2 %}
+                                    bg-red-600
+                                {% elif datapoint.nutrient_level >= 1 %}
+                                    bg-red-700
+                                {% else %}
+                                    bg-red-800
+                                {% endif %}">
                                     <div class="">{{ datapoint.crop.value }}</div>
                                 </div>
                             </div>
@@ -261,7 +245,7 @@
 
                         <div class="flex flex-col justify-center items-center ml-8">
                             <button type="button" id="add-field-btn"
-                                class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                class="rounded-full bg-emerald-500 p-2 text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                 <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path
                                         d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
@@ -274,9 +258,9 @@
                     </div>
 
                     <!-- Add field btn -->
-                    <div class="flex justify-center items-center mt-8">
+                    <div class="flex justify-center items-center mt-8 pb-16">
                         <button type="button" id="add-field-btn"
-                            class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            class="rounded-full bg-emerald-500 p-2 text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                             <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path
                                     d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />

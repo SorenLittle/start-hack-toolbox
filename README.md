@@ -1,30 +1,56 @@
+# Croptimized
 
+**Croptimized** is a web application designed to optimize and visualize agricultural crop rotation data using Linear Programming (CPLEX), with a forward-looking design that is quantum-ready. It integrates with an API to process and analyze data, helping in the decision-making process for sustainable agricultural practices.
 
-## Setup
+## Setup Instructions
+
+Before diving into running the application locally, ensure your environment is prepared with the necessary tools and configurations.
 
 ### Environment Variables
 
-| Variable | Default | Purpose |
-|----------|---------|---------|
-| MONGO_DB     | start-hack  | Name of the target database in MongoDB |
+Set up the following environment variable in your system to connect to the MongoDB database.
 
-### F/E Setup
+| Variable  | Default    | Purpose                                |
+|-----------|------------|----------------------------------------|
+| MONGO_DB  | start-hack | Specifies the target database in MongoDB for the application to use. |
 
-Open css auto-refresh in a parallel terminal
+### Frontend (F/E) Setup
+
+#### Prerequisites
+
+- Ensure you have Node.js installed on your system to handle the project's dependencies and scripts.
+- Navigate to your project's root directory before executing the following commands.
+
+#### Dependencies Installation
+
+Install the necessary dependencies for the frontend:
+
+```bash
+npm install tailwindcss postcss autoprefixer
+```
+Compile and Run CSS
+To enable styling and auto-reload features, compile and run the CSS in a separate terminal window:
 
 ```bash
 cd src/app/frontend/static
 npm run build
 ```
 
-There is a helpful pink outline applied to the base layer css for debugging purposes. To remove it, comment out the following line in [`input.css`](src/app/frontend/static/css/input.css):
 
-```css
-@layer base {
-    * {
-        @apply outline outline-1 outline-pink-200 
-    }
-    
-    /* ... */
-}
+### Running Locally with Docker
+Prerequisites
+- Docker and docker-compose must be installed on your system.
+- Start your Docker client to ensure Docker commands can be executed.
+
+
+#### Starting Docker Client
+```bash
+sudo systemctl start docker
+```
+
+#### Running the Application
+To run the FastAPI instance locally with Docker, ensuring your project's root directory is your current working directory:
+
+```bash
+sudo docker-compose up --build
 ```

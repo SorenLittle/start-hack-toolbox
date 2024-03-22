@@ -6,6 +6,30 @@
 <script defer>
     // JavaScript to handle the increment
     document.addEventListener('DOMContentLoaded', (event) => {
+    function clearSoilTypeSelections() {
+        document.querySelectorAll('#yearButton, #monthButton, #dayButton').forEach(button => {
+            button.classList.remove('bg-gray-300', 'text-white');
+            button.classList.add('bg-white', 'text-gray-900');
+        });
+    }
+
+    // Add event listeners to soil type buttons for single selection
+    document.querySelectorAll('#yearButton, #monthButton, #dayButton').forEach(button => {
+        button.addEventListener('click', function() {
+            clearSoilTypeSelections(); // Clear previous selections
+            this.classList.add('bg-gray-300', 'text-white'); // Add selected state styles
+            this.classList.remove('bg-white', 'text-gray-900');
+        });
+    });
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+        document.querySelectorAll('.selectable-button').forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('bg-indigo-500');
+            button.classList.toggle('bg-indigo-600');
+            // Adjust the hover color for active buttons directly in the class list
+            button.classList.contains('bg-indigo-500') ? button.classList.add('hover:bg-indigo-700') : button.classList.remove('hover:bg-indigo-700');
+        });
+        });
         const textElement = document.getElementById('animated-text');
         const word = 'croptimized';
         let letterIndex = 0;
@@ -57,6 +81,26 @@
         });
 
     });
+    const buttons = document.querySelectorAll('.selectable-button');
+  
+    // Function to clear all selections
+    function clearSelections() {
+        buttons.forEach(button => {
+        button.classList.remove('bg-gray-300', 'text-white');
+        button.classList.add('bg-white', 'text-gray-900');
+        });
+    }
+    
+    // Add click event listener to each button
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+        clearSelections(); // Clear previous selections
+        this.classList.add('bg-gray-300', 'text-white'); // Add selected state styles
+        this.classList.remove('bg-white', 'text-gray-900');
+        });
+    });
+
+    
 
 
 
@@ -97,11 +141,49 @@
             <div class="flex flex-col h-screen bg-white px-32">
 
                 <!-- Inputs -->
-                <div class="bg-green-900 m-12">
-                    Placeholder
-                </div>
+                <div class="bg-transparent m-12 flex divide-x divide-gray-200">
+                    <!-- Left side with Placeholder -->
+                    <div class="flex-1 flex justify-center items-center relative h-full">
+                        <iframe class="absolute inset-0 w-full h-full" frameborder="0" title="map" scrolling="no" src="https://maps.google.com/maps?q=28.5042,77.3018&amp;t=k&amp;z=12&amp;output=embed&amp;iwloc=near" allowfullscreen></iframe>
+                      </div>
+                      
+                      
+                      
+                          
+                    
+                  
+                    <!-- Right Side -->
+                    <div class="flex-1 flex flex-col">
+                        <div class="flex-1 flex gap-4 items-start ml-4 mb-4 text-xl text-slate-500">
+                            Available Crops
+                          </div>
+                        <!-- Buttons Section in a 3x2 Grid, Aligned Left -->
+                        <div class="grid grid-cols-3 gap-4 w-full items-start ml-4">
+                     
+                            <!-- Generate 6 buttons -->
+                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Corn</button>
+                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Soybean</button>
+                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Maize</button>
+                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Wheat</button>
+                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Barley</button>
+                            <button type="button" class="selectable-button rounded-md bg-indigo-600 px-3 py-5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sunflower</button>
+                        </div>
+                        <div class="flex-1 flex gap-4 items-start ml-4 mt-4 text-xl text-slate-500">
+                            Available Soil Types
+                          </div>
 
-                <div class="p-8 rounded-lg">
+                        <!-- Dropdown Section -->
+                        <div class="flex flex-col justify-center items-center gap-4 ml-4 mt-4 w-full">
+                            <div class="isolate inline-flex w-full rounded-md shadow-sm">
+                              <button type="button" id="yearButton" class="selectable-button flex-1 rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">Clay</button>
+                              <button type="button" id="monthButton" class="selectable-button flex-1 bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">Loam</button>
+                              <button type="button" id="dayButton" class="selectable-button flex-1 rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">Silt</button>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+
+                <div class=" rounded-lg">
                     <!-- Display -->
                     <div class="flex justify-center items-center">
                         <div

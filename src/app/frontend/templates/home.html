@@ -103,33 +103,40 @@
     
 
 
-    
+
 </script>
 
 <div>
 
     <!-- Background image -->
-    <div id="full-background" class="bg-cover bg-fixed bg-center bg-no-repeat"
+    <div id="full-background" class="bg-cover bg-fixed bg-center bg-no-repeat z-10"
         style="background-image: url('../static/img/syngenta/Cropwise_Planting_Image_Asset_2023\ 16.jpg');">
 
 
         <!-- "Landing" section -->
-        <div class="h-screen">
+        <div class="h-screen relative">
             <div class="grid grid-cols-3 grid-rows-3 h-screen justify-center">
-                <div class="col-span-3 row-span-1"></div>
-                <div class="row-span-1"></div>
-                <div class="row-span-1 flex justify-center items-center">
-                    <h1 id="animated-text" class="text-white text-opacity-90 snap-center text-9xl font-bold tracking-widest"></h1>
+                <div class="relative col-span-2 row-span-1 justify-start items-start">
+                    <img class="absolute w-20 top-4 left-4" src='../static/img/start_hack.png'>
                 </div>
-                <div class="row-span-1"></div>
+                <div class="relative col-span-1 row-span-1 justify-end items-end">
+                    <img class="absolute w-44 top-4 right-4"
+                        src='../static/img/syngenta/Cropwise Spray Assist_Video open file_Images_Syngenta logo.png'>
+                </div>
+                <div class="col-span-3 flex justify-center items-center">
+                    <h1 id="animated-text"
+                        class="text-white text-opacity-90 snap-center text-9xl font-normal font-mono tracking-widest">
+                    </h1>
+                </div>
                 <div class="col-span-3 row-span-1"></div>
             </div>
         </div>
-        
+
 
         <!-- Scrolling section -->
-        <div class="">
-            <div class="bg-gradient-to-b from-transparent to-white h-48"></div>
+        <div class="z-2">
+            <!-- <div class="bg-gradient-to-b from-transparent to-white h-48"></div> -->
+            <div class="bg-white from-transparent to-white h-48"></div>
 
             <div class="flex flex-col h-screen bg-white px-32">
 
@@ -176,7 +183,7 @@
                     </div>
                   </div>
 
-                <div class="bg-slate-50 shadow-inner p-8 rounded-lg">
+                <div class="p-8 rounded-lg">
                     <!-- Display -->
                     <div class="flex justify-center items-center">
                         <div
@@ -275,7 +282,7 @@
                 </div>
             </div>
 
-            
+
         </div>
     </div>
 </div>
